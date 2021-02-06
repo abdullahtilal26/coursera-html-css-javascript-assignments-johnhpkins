@@ -1,0 +1,392 @@
+body{
+font-size:16px;
+color:#fff;
+background-color:#61122f;
+font-family: 'Oxygen', sans-serif;
+
+}
+
+#header-nav{ /*yellow header*/
+
+	background-color: #f6b319;
+	border-radius:0 ;
+	border: 0;
+}
+#logo-img{ /*logo of restaurant*/
+	background: url("../images/restaurant-logo_large.png") no-repeat;
+	width: 150px;
+	height: 150px;
+	margin: 10px 15px 10px 0;
+}
+.navbar-brand{/*to align brand name and other thing with logo*/
+	padding-top: 25px;
+}
+
+.navbar-brand h1{/*brand name styling*/
+font-family: 'Lora', serif;
+color: #557c3e;
+font-size: 1.5em;
+text-transform: uppercase;
+font-weight: bold;
+text-shadow: 1px 1px 1px #222; /*hori-shadow,vertical-shadow,blur-radius,color*/
+margin-top: 0;/*personal preference of teacher*/
+margin-bottom: 0;
+line-height: .75;
+}
+
+.navbar-brand a:hover,.navbar-brand a:focus{/*to remove underline of hyperlink from brand name "david ch... bistro"*/
+	text-decoration: none;
+}
+
+.navbar-brand p{/*styling kosher certified and its star logo*/
+	color: #000;
+	text-transform: uppercase;
+	font-size: .7em;
+	margin-top: 15px;/*to give some space bw brand name and this kocher certified line*/
+
+
+}
+
+#nav-list{/* align meunue icons with brand name*/
+	margin-top: 10px;
+}
+#nav-list a{/*menue icon colors and center them with meue text*/
+color: #951c49;
+text-align: center;
+}
+#nav-list a:hover {/*color for hovering over menue items*/
+	background-color: #E7E7E7;
+}
+#nav-list a span{/*this only increase size of menue icons*/
+	font-size: 1.8em;/*since icons are glyphicon so thier size will be increas like font*/
+}
+#phone{/*to align phone no with menue icons*/
+	margin-top:5px;
+}
+#phone a{/*align phone no to right but no effect as its already floa tto right by "navbar-right".And to bring"we deliver" closer to phone no we reduce bottom padding of honeno*/
+text-align:right;
+padding-bottom: 0;
+}
+#phone div{/*styling and aliging "we deliver"*/
+	color: #557c3e;
+	text-align: right;/*align text to right like phone no*/
+	padding-right:15px;/*add this so it match with right edge of phone no and dont go further right*/
+}
+.navbar-header button.navbar-toggle,.navbar-header .icon-bar{/*styling of collapse menue and lines in it*/
+	border: 1px solid #61122f;
+}
+.navbar-header button.navbar-toggle{/*why did we not do clear bith at "kosher certified" span tag? why here at button.navbar-toggle?maybe coz .navbartoggle comes after #nav-list so if we cleare both here its works the.plus(clear left is working here too)--->THE ANSWER TO THESE QUESTION IS NAVBAR-HEADER AND NAV-LIST ARE DIFFERENT ELEMENTS.BUT THE NAV-LIST IS CALLED BY HEADER-NAV THERREFORE NAVBAR-TOGGLE IS IN CONTROL.THEREFORE WHEN IT CLEAR FLOATS,SPAN OF "KUTCHER CERTIFIED" COMES INSIDE ITS CONTAINER..THEREFORE WHEN ONE IS LEFT AND ANOTHER IS RIGHT FLOATED,|aliginging menue*/
+	clear: both;/*make "kucther cerified "inside yellow box*/
+	margin-top: -30px;/*to align menue with "david chu"*/
+}
+
+.panel-footer{/*aliging and styling footer.here overridding bootstrap class*/
+margin-top: 30px;
+padding-top: 35px;
+padding-bottom: 30px;
+background-color: #222;
+border-top: 0;/*to remove white bw footer and tiles*/
+}
+.panel-footer div.row{/*seperates copyright from above footer*/
+	margin-bottom: 35px;
+}
+#hours,#address{/*spacing bw lines*/
+	line-height: 2;
+}
+#hours >span,#address >span{/*heading styling for footer*/
+	font-size: 1.3em;
+}
+#address p{/*"deliver are..." styling*/
+	color:#557c3e;
+	font-size: .8em;
+	line-height: 1.8;
+}
+#testimonials{
+	font-style:italic;
+}
+#testimonials p:nth-child(2){/*here targetig second para to seperate it from above para*/
+	margin-top: 25px;
+}
+
+
+.container .jumbotron{/*styling some common properties of all screen size jumbotron*/
+		box-shadow: 0 0 50px #3F0C1F;
+		border:2px solid #3F0C1F;
+	}
+
+#menue-tile,#specials-tile,#map-tile{/*styling and aliging home-tiles*/
+	height: 250px;
+	width: 100%;/*100% width of container.here parent container is <div class="col-md-4 col-sm-6 col-xs-12"> and so on*/
+	margin-bottom: 15px;
+	position: relative;/*will put some kind of anchor for rest of the child elements of whatever these ids are.so we will be able to position them with in this element*/
+	border: 2px solid #3F0C1F;
+	overflow: hidden;/*doesnot show scroll bar and clip(for map)*/
+}
+
+#menue-tile:hover,#specials-tile:hover,#map-tile:hover{/*addindg special hovering efect on home-tiles*/
+	box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+ #menue-tile{/*adding images to tiles*/
+  	background: url("../images/menu-tile.jpg") no-repeat;
+  	background-position: center;/*positioning center allow our pic to be visible even if we shrink our container by decreasing screen size as the  main part of pic of dish  still remain visible*/
+  }
+
+  #specials-tile{/*adding images to tiles*/
+  	background: url("../images/specials-tile.jpg") no-repeat;
+  	background-position: center;
+
+  }
+
+  #menue-tile span,#specials-tile span,#map-tile span{/*aliging and styling menue-tiles heading*/
+  	position: absolute;
+  	bottom:0;/*if position is absolute,bottom sets the bottom edge of an element to a unit above the bottom edge of its nearest positioned ancestor*/
+  	right: 0;
+  	width: 100%;
+  	text-align: center;
+  	font-size: 1.6em;
+  	text-transform: uppercase;
+  	background-color: #000;
+  	color: #fff;
+  	opacity: .8;/*1 means 100% which means u cant see through*/
+
+  }
+
+/*________________________category html styling___________________________________________________________*/
+
+.category-tile{
+
+	position: relative;
+	border: 2px solid #3F0C1F;
+	overflow: hidden;/*clip the pic if exceeding the box*/
+	width: 200px;
+	height: 200px;
+	margin: 0 auto 15px;
+
+}
+
+.category-tile span{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	background-color: #000;
+	color: #fff;
+	opacity: .8;*/
+}
+
+.category-tile:hover{
+	box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menue-categories-title+div{/*it means to target his next sibling that is div. and both of there parent is <div id="main-content">*/
+	margin-bottom: 50px;
+}
+
+/*________________________________________________________________________________________________________*/
+
+/*--------single category--------------------------------------------------------------------------**/
+#menue-category-des {
+	margin-bottom: 50px;
+
+}
+.menue-item-tile{
+	margin-bottom: 25px;
+}
+.menue-item-tile hr{
+	width: 80%;
+}
+.menue-item-tile .menue-item-price{
+	font-size: 1.1em;
+	text-align: right;
+	margin-top: -15px;
+	margin-right: -15px;
+}
+.menue-item-tile .menue-item-price span{
+	font-size: .6em;
+}
+.menue-item-photo{
+	position: relative;
+	border: 2px solid #3f0c1f;
+	overflow: hidden;
+	padding: 0;
+	margin-right: -15px;
+	margin-left: auto;
+	margin-bottom: 20px;
+	max-width: 250px;
+}
+.menue-item-photo div{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 80px;
+	background-color: #557c3e;
+	text-align: center;
+}
+.menue-item-description{
+	padding-right: 30px;
+}
+h3.menue-item-title{
+	margin: 0 0 10px;
+}
+.menue-item-details{
+	font-size: .9em;
+	font-style: italic;
+}
+/*--------------------------------------------------------------------------------------------------*/
+
+
+
+@media(min-width:1200px ){/*styling jumbotron for width>=1200*/
+	.container .jumbotron{
+		background: url("../images/jumbotron_1200.jpg") no-repeat;
+		height: 675px;
+		
+	}
+
+}
+
+@media(min-width:992px )and (max-width:1199px){/**reducing image size and its styling along with decreasing brands name font to align menue and brand name in one line and to reduce height of yellow header and styling jumbotron for width<=1199 and width>=992*/
+	#logo-img{
+		background:url("../images/restaurant-logo_medium.png") no-repeat;
+		width: 100px;
+		height: 100px;
+		margin: 5px 5px 5px 0;
+	}
+
+	.navbar-brand h1{
+		font-size: 1.483em;
+	}
+
+	.container .jumbotron{
+		background: url("../images/jumbotron_992.jpg") no-repeat;
+		height: 558px;
+		
+	}
+
+}
+
+@media (min-width: 768px) and (max-width: 991px){/*here take care of spaces in syntax otherwise it wont work correctly*/
+	/* logo hides behind brand name and dont show up and we are just letting it hide as it looks okay and just fine and styling jumbotron for width<=991 and width>=768*/ 
+	.container .jumbotron{
+    background: url('../images/jumbotron_768.jpg') no-repeat;
+    height: 432px;
+    
+  }
+
+
+
+}
+
+@media(max-width:767px ){/*styling for extra small devices so it looks good and also making "kusher certified"inside of yellow box and also styling drop down menue glyphicon and font |styling jumbotron for width<=767*/
+	.navbar-brand{
+		padding-top:10px;
+		height: 80px;
+
+	}
+	.navbar-brand h1{
+		padding-top: 10px;
+		font-size: 5vw; /*1vw=1% of view port width.thus its also responsive*/
+		
+	}
+	.navbar-brand p{
+		text-transform: uppercase;
+		font-size: .6em;
+		margin-top: 12px;
+	}
+	.navbar-brand p img{
+		height: 20px;
+	}
+	#collapsable-nav a{
+		font-size: 1.2em;/*this increas "menue" item size but also increase glyph icon size as glyphicon is 1.8em of a tag.*/
+
+	}
+	#collapsable-nav a span{/*resize equal to "menue" and add some space bw them*/
+		font-size: 1em;/*this will make glyph icon size equal to the "menue" item.(1em of "a" means 100 % of "a" tag*/
+		margin-right: 5px;
+
+	}
+
+	#call-btn > a {/*styling and aliging phone no for xs-sxreen*/
+    font-size: 1.5em;
+    display: block;/*makes number in center with "delivery"*/
+    margin: 0 20px;
+    padding: 10px;
+    border: 2px solid #fff;
+    background-color: #f6b319;
+    color: #951c49;
+  }
+
+   #xs-deliver {/*aliging and styling "we deliver" for xs-screen*/
+    margin-top: 5px;
+    font-size: .7em;*/
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  .panel-footer section{/*aliging footer section and centering them for mob*/
+  	margin-bottom: 30px;
+  	text-align: center;
+  }
+
+  .panel-footer section:nth-child(3){/*removinf extra space bw copyright and testimonials in mob*/
+  	margin-bottom:0;
+  }
+
+  .panel-footer section hr{/*reducing horizontal row width*/
+  	width: 50%;
+  	
+  }
+
+  .container .jumbotron{/*althugh we we have made "visivle-xs" class in html to show jumbotron byt here at this media querie we need to style it that why we use it here again.*/
+  	margin-top: 30px;
+  	padding: 0;
+  	
+  }
+  #menue-tile,#specials-tile{/*aliging tiles to reuce extra space that these styles are occupying.*/
+  	width: 360px;/*size given to equal to image used.here size remain same even if squeez in lowest screen possible and is a little smaller than jumbortron*/
+  	margin: 0 auto 15px auto;
+  }
+
+  .menue-item-photo{/*aliginging single-category item in center*/
+  	margin-right: auto;
+
+  }
+ .menue-item-tile .menue-item-price{/*why parent div is need here?anyway it align singl category item price*/
+ 	text-align: center;				/*.class1.class2	.name1.name2	Selects all elements with both name1 and name2 set within its class attribute*/
+ 									/*.class1 .class2	.name1 .name2	Selects all elements with name2 that is a descendant of an element with name1*/
+  
+
+  }
+ .menue-item-description{/*align single catgeroty item title*/
+	text-align: center;
+  }
+
+}
+
+@media(max-width:479px ){/*here we add this media query for veryy very very small devices like iphone 4 and here this max width is not any breakpoint but when we were squezing we noticed our style was not looking very good at that width so we decided to change design  and make thing better at that width and below it*/
+	#menue-tile,#specials-tile{/*changing width and centering tile image*/
+		width: 280px;
+		margin: 0 auto 15px auto;
+	}
+
+	.navbar-brand h1{/*styling and aliging our brand name*/
+		padding-top: 5px;
+		font-size: 6vw;
+
+
+	}
+
+	.col-xxs-12{/*here we made our own col-xxs-12 class in which we copy all content of col-xs-12 class present in bootstrap.css coz we wanted to mimic that style for width less than 479px and we cant use col-xs-12 instead of col-xxs-12 coz we have already define it for the length 768px*/
+	  position: relative;
+	  min-height: 1px;
+	  padding-right: 15px;
+	  padding-left: 15px;
+	  float: left;
+	  width: 100%;
+
+	}
+}
